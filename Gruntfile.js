@@ -28,6 +28,21 @@ module.exports = function (grunt) {
     // Project settings
     config: config,
 
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built from %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:websiddu/building-blocks.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -49,6 +64,10 @@ module.exports = function (grunt) {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      less: {
+        files: ['<%= config.app %>/styles/{,*/}*.less'],
+        tasks: ['less:dist']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -65,7 +84,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9000,
+        port: 9004,
         open: true,
         livereload: 35729,
         // Change this to '0.0.0.0' to access the server from outside
@@ -203,6 +222,39 @@ module.exports = function (grunt) {
         }
       }
     },
+    less: {
+      dist: {
+        options: {
+          paths: ["<%= config.app %>"]
+        },
+        files: {
+          "<%= config.app %>/styles/main.css": "<%= config.app %>/styles/bb.less"
+        }
+      }
+    },
+
+    webfont: {
+      icons: {
+        src: '<%= config.app %>/fonts/icons/*.svg',
+        dest: '<%= config.app %>/fonts/',
+        destCss: '<%= config.app %>/styles/utils/',
+        syntax: 'bootstrap',
+
+        options: {
+          stylesheet: 'less',
+          relativeFontPath: '../fonts/',
+          destHtml: '<%= config.app %>/fonts/',
+          font: 'icons',
+          hashes: false,
+          templateOptions: {
+            classPrefix: 'icon-'
+          }
+
+        },
+
+      }
+    },
+
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
@@ -306,7 +358,10 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'data/{,*/}*.*',
+            'images/{,*/}*.*',
+            'fonts/{,*/}*.*'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -414,10 +469,12 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'rev',
+    //'rev',
     'usemin',
     'htmlmin'
   ]);
+
+  grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol']);
 
   grunt.registerTask('default', [
     'newer:jshint',
