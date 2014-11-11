@@ -1,1 +1,1 @@
-(function(){console.log("'Allo from CoffeeScript!")}).call(this);
+(function(){console.log("'Allo from CoffeeScript!")}).call(this),function(){"use strict";this.bbApp=angular.module("bbApp",["ngRoute","ngAnimate"])}.call(this),function(){"use strict";this.mainController=function(){},this.mainController.$inject=["$scope"],bbApp.controller("mainController",mainController)}.call(this);
