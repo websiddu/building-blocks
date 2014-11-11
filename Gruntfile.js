@@ -169,7 +169,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/scripts',
           src: '{,*/}*.{coffee,litcoffee,coffee.md}',
-          dest: '.tmp/scripts',
+          dest: '<%= config.app %>/js',
           ext: '.js'
         }]
       },
