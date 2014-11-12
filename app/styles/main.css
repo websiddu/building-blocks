@@ -3756,11 +3756,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
-  .navbar {
-    border-radius: 4px;
-  }
-}
-@media (min-width: 768px) {
   .navbar-header {
     float: left;
   }
@@ -3859,7 +3854,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 14.5px 15px;
+  padding: 0 15px;
   font-size: 19px;
   line-height: 21px;
   height: 50px;
@@ -4167,8 +4162,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-color: #43434a;
+  border-color: #2b2b2f;
 }
 .navbar-inverse .navbar-brand {
   color: #777777;
@@ -4193,7 +4188,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #080808;
+  background-color: #2b2b2f;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -4213,20 +4208,20 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #101010;
+  border-color: #323237;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #080808;
+  background-color: #2b2b2f;
   color: #ffffff;
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #080808;
+    border-color: #2b2b2f;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #080808;
+    background-color: #2b2b2f;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
     color: #777777;
@@ -4240,7 +4235,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #080808;
+    background-color: #2b2b2f;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -6165,4 +6160,7 @@ button.close {
 }
 .container-fluid {
   max-width: 1200px;
+}
+.navbar-brand img {
+  margin-top: 5px;
 }
