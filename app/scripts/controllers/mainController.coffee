@@ -1,6 +1,6 @@
 "use strict"
 
-@mainController = ($scope) ->
+@mainController = ($scope, $window, $rootScope) ->
 
 
   $scope.badges = [{
@@ -48,7 +48,14 @@
     iclass: 'c5'
   }]
 
+  $rootScope.$on "$routeChangeStart",  (event, next, current) ->
+    $('.modal-backdrop').remove()
+    $('body').removeClass('modal-open').removeAttr('style')
 
-@mainController.$inject = ['$scope']
+
+  $scope.reload = ->
+    #$window.location.reload();
+
+@mainController.$inject = ['$scope', '$window', '$rootScope']
 
 bbApp.controller('mainController', mainController);

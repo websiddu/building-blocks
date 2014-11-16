@@ -20,26 +20,12 @@
     <!-- endbuild -->
 
   </head>
-  <body ng-controller="mainController">
+  <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <ng-include src="'templates/landing/header.html'"></ng-include>
-    <ng-include src="'templates/landing/hero.html'"></ng-include>
-    <ng-include src="'templates/landing/actions.html'"></ng-include>
-    <ng-include src="'templates/landing/stats.html'"></ng-include>
-    <ng-include src="'templates/landing/leaderboard.html'"></ng-include>
-    <ng-include src="'templates/landing/stories.html'"></ng-include>
-    <ng-include src="'templates/landing/footer.html'"></ng-include>
-    <ng-include src="'templates/common/login.html'"></ng-include>
-
-
-<div class="container-fluid">
-
-</div>
-
-
+    <div ng-view></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -78,6 +64,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="js/main.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/config/routes.js"></script>
 
         <script src="js/controllers/mainController.js"></script>
         <!-- endbuild -->

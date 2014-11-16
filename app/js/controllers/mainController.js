@@ -1,7 +1,7 @@
 (function() {
   "use strict";
-  this.mainController = function($scope) {
-    return $scope.badges = [
+  this.mainController = function($scope, $window, $rootScope) {
+    $scope.badges = [
       {
         name: "Arya Stark",
         school: "Seattle public school",
@@ -44,9 +44,14 @@
         iclass: 'c5'
       }
     ];
+    $rootScope.$on("$routeChangeStart", function(event, next, current) {
+      $('.modal-backdrop').remove();
+      return $('body').removeClass('modal-open').removeAttr('style');
+    });
+    return $scope.reload = function() {};
   };
 
-  this.mainController.$inject = ['$scope'];
+  this.mainController.$inject = ['$scope', '$window', '$rootScope'];
 
   bbApp.controller('mainController', mainController);
 
