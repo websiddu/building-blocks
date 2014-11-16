@@ -5847,11 +5847,12 @@ textarea.no-resize {
 }
 .landing-actions-wrapper {
   background-color: #efefea;
-  padding: 50px 0;
+  padding: 50px 0 20px;
 }
 .landing-action {
   text-align: center;
   height: 140px;
+  margin-bottom: 30px;
 }
 .landing-action:hover {
   cursor: pointer;
@@ -5873,7 +5874,7 @@ textarea.no-resize {
   color: #fff;
 }
 .leaderboard {
-  padding: 50px 0;
+  padding: 50px 0 30px;
 }
 .badge-user img {
   border-radius: 100%;
@@ -5899,6 +5900,7 @@ textarea.no-resize {
   width: 100%;
   padding: 20px;
   min-height: 300px;
+  margin-bottom: 30px;
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 0 0px 4px rgba(163, 163, 163, 0.23);
@@ -6026,7 +6028,7 @@ textarea.no-resize {
 }
 .stats {
   background-color: #fff;
-  padding: 40px 0;
+  padding: 40px 0 20px;
 }
 .stat {
   height: 180px;
@@ -6037,6 +6039,7 @@ textarea.no-resize {
   position: relative;
   border-radius: 5px;
   width: 100%;
+  margin-bottom: 20px;
   transition: 0.4s all ease-in;
 }
 .stat em {
