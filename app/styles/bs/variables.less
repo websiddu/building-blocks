@@ -2,6 +2,62 @@
 // Variables
 // --------------------------------------------------
 
+@color1:    #c3e279;
+@color2:    #f7fec8;
+@color3:    #ffd069;
+@color4:    #f27669;
+@color5:    #dc9cbe;
+@color6:    #c59ae0;
+@color7:    #969dcc;
+
+
+// Random colors
+// -------------------------
+@c1: #76a7fa;
+@c2: #e46f61;
+@c3: #4dbfd9;
+@c4: #fbcb43;
+@c5: #8cc474;
+@c6: #bc5679;
+@c7: #6f85bf;
+@c8: #f9b256;
+
+
+@bluejeans-dark: #4A89DC;
+@bluejeans-light: #5D9CEC;
+
+@aqua-dark: #3BAFDA;
+@aqua-light: #4FC1E9;
+
+@mint-dark: #37BC9B;
+@mint-light: #48CFAD;
+
+@grass-dark: #8CC152;
+@grass-light: #A0D468;
+
+@sunflower-dark: #F6BB42;
+@sunflower-light: #FFCE54;
+
+@bittersweet-dark: #E9573F;
+@bittersweet-light: #FC6E51;
+
+@grapefruit-dark: #DA4453;
+@grapefruit-light: #ED5565;
+
+@lavender-dark: #967ADC;
+@lavender-light: #AC92EC;
+
+@pinkrose-dark: #D770AD;
+@pinkrose-light: #EC87C0;
+
+@lightgray-dark: #E6E9ED;
+@lightgray-light: #F5F7FA;
+
+@mediumgray-dark: #AAB2BD;
+@mediumgray-light: #CCD1D9;
+
+@darkgray-dark: #434A54;
+@darkgray-light: #656D78;
 
 //== Colors
 //
@@ -14,7 +70,7 @@
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 @brand-primary:         #428bca;
-@brand-success:         #5cb85c;
+@brand-success:         #5CCC7A;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -25,7 +81,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #C9D7E4;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -335,8 +391,9 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    50px;
-@navbar-margin-bottom:             @line-height-computed;
+@navbar-height:                    70px;
+@navbar-margin-bottom:             0;
+// @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
@@ -369,12 +426,12 @@
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
-@navbar-inverse-bg:                         #43434a;
+@navbar-inverse-bg:                         #fff;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @gray-light;
-@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-color:           #333;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);

@@ -1,0 +1,146 @@
+// ............................................................
+// .for
+
+.for(@i, @n) {.-each(@i)}
+.for(@n)     when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+
+// ............................................................
+// .for-each
+
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
+
+.loadmore {
+  text-align: center;
+  padding: 10px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.color-divider {
+  height: 4px;
+  width: 100%;
+  background: url("../images/topbar.png");
+  .clearfix;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.infoText {
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.normalText {
+  font-size: 14px;
+}
+
+.smallText {
+  font-size: 13px;
+}
+
+.miniText {
+  font-size: 11px;
+}
+
+.inlineText {
+  margin-right: 5px;
+}
+
+// Textarea resize styles
+textarea.vertical-resize {
+  resize: vertical;
+}
+
+textarea.horizontal-resize {
+  resize: horizontal;
+}
+
+textarea.no-resize {
+  resize: none;
+}
+
+// Vertical scroll and horizontal scroll
+.vs {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.hs {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.c1 {
+  color: @c1;
+}
+.c2 {
+  color: @c2;
+}
+.c3 {
+  color: @c3;
+}
+.c4 {
+  color: @c4;
+}
+.c5 {
+  color: @c5;
+}
+.c6 {
+  color: @c6;
+}
+.c7 {
+  color: @c7;
+}
+.c8 {
+  color: @c8;
+}
+
+.bgc1, .bgc-microblog {
+  background: @c1;
+}
+.bgc2 {
+  background: @c2;
+}
+.bgc3, .bgc-question {
+  background: @c3;
+}
+.bgc4, .bgc-wiki {
+  background: @c4;
+}
+.bgc5, .bgc-idea {
+  background: @c5;
+}
+.bgc6, .bgc-challange {
+  background: @c6;
+}
+.bgc7, .bgc-blogpost {
+  background: @c7;
+}
+.bgc8 {
+  background: @c8;
+}

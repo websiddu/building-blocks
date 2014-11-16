@@ -68,6 +68,10 @@ module.exports = function (grunt) {
         files: ['<%= config.app %>/styles/{,*/}*.less'],
         tasks: ['less:dist']
       },
+      webfont: {
+        files: ['<%= config.app %>/fonts/{,*/}*.svg'],
+        tasks: ['webfont:icons']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
