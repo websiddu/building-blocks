@@ -1,5 +1,6 @@
 "use strict"
-bbApp.config(($routeProvider, $locationProvider) ->
+
+@appConfig = ($routeProvider, $locationProvider) ->
   $routeProvider
   .when("/",
     templateUrl: "templates/landing/index.html"
@@ -16,4 +17,7 @@ bbApp.config(($routeProvider, $locationProvider) ->
   .otherwise
     templateUrl: "views/404.html"
     controller: "404Ctrl"
-)
+
+@appConfig.$inject = ['$routeProvider', '$locationProvider']
+
+bbApp.config(appConfig)

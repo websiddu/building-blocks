@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  bbApp.config(function($routeProvider, $locationProvider) {
+  this.appConfig = function($routeProvider, $locationProvider) {
     return $routeProvider.when("/", {
       templateUrl: "templates/landing/index.html",
       controller: "mainController"
@@ -14,6 +14,10 @@
       templateUrl: "views/404.html",
       controller: "404Ctrl"
     });
-  });
+  };
+
+  this.appConfig.$inject = ['$routeProvider', '$locationProvider'];
+
+  bbApp.config(appConfig);
 
 }).call(this);
