@@ -52,6 +52,59 @@
     $('.modal-backdrop').remove()
     $('body').removeClass('modal-open').removeAttr('style')
 
+  $scope.list_of_string = []
+
+  $scope.select2Options =
+    'multiple': true
+    'width': '100%'
+    'placeholder': 'Type the skill'
+    'simple_tags': true
+    'tags': ['Gardening', 'Cooking', 'Photography', 'Craft']
+
+  $scope.list_of_string_one = []
+
+  $scope.select2OptionsOne =
+    'multiple': true
+    'width': '100%'
+    'simple_tags': true,
+    'placeholder': 'Type the skill'
+    'tags': ['Amazing Worker', 'Cool dude', 'Garden Friend', 'Super Teacher']
+
+  $scope.range = {}
+  $scope.range.min = 1
+  $scope.range.max = 100
+
+  $scope.today = ->
+    $scope.dt = new Date()
+    return
+
+  $scope.today()
+  $scope.clear = ->
+    $scope.dt = null
+    return
+
+
+  # Disable weekend selection
+  $scope.disabled = (date, mode) ->
+    mode is "day" and (date.getDay() is 0 or date.getDay() is 6)
+
+  $scope.toggleMin = ->
+    $scope.minDate = (if $scope.minDate then null else new Date())
+    return
+
+  $scope.toggleMin()
+  $scope.open = ($event) ->
+    $event.preventDefault()
+    $event.stopPropagation()
+    $scope.opened = true
+    return
+
+  $scope.openOne = ($event) ->
+    $event.preventDefault()
+    $event.stopPropagation()
+    $scope.openedOne = true
+    return
+
 
   $scope.reload = ->
     #$window.location.reload();

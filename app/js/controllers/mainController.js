@@ -48,6 +48,49 @@
       $('.modal-backdrop').remove();
       return $('body').removeClass('modal-open').removeAttr('style');
     });
+    $scope.list_of_string = [];
+    $scope.select2Options = {
+      'multiple': true,
+      'width': '100%',
+      'placeholder': 'Type the skill',
+      'simple_tags': true,
+      'tags': ['Gardening', 'Cooking', 'Photography', 'Craft']
+    };
+    $scope.list_of_string_one = [];
+    $scope.select2OptionsOne = {
+      'multiple': true,
+      'width': '100%',
+      'simple_tags': true,
+      'placeholder': 'Type the skill',
+      'tags': ['Amazing Worker', 'Cool dude', 'Garden Friend', 'Super Teacher']
+    };
+    $scope.range = {};
+    $scope.range.min = 1;
+    $scope.range.max = 100;
+    $scope.today = function() {
+      $scope.dt = new Date();
+    };
+    $scope.today();
+    $scope.clear = function() {
+      $scope.dt = null;
+    };
+    $scope.disabled = function(date, mode) {
+      return mode === "day" && (date.getDay() === 0 || date.getDay() === 6);
+    };
+    $scope.toggleMin = function() {
+      $scope.minDate = ($scope.minDate ? null : new Date());
+    };
+    $scope.toggleMin();
+    $scope.open = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+      $scope.opened = true;
+    };
+    $scope.openOne = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+      $scope.openedOne = true;
+    };
     return $scope.reload = function() {};
   };
 
