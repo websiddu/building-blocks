@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  this.mainController = function($scope, $window, $rootScope) {
+  this.mainController = function($scope, $window, $rootScope, $http) {
     $scope.badges = [
       {
         name: "Arya Stark",
@@ -91,10 +91,19 @@
       $event.stopPropagation();
       $scope.openedOne = true;
     };
-    return $scope.reload = function() {};
+    $scope.searchResults = [];
+    $scope.initSearchResults = function() {
+      return $http({
+        url: 'data/search-results.json'
+      }).success(function(data, status) {
+        console.log(data);
+        return $scope.searchResults = data;
+      });
+    };
+    return $scope.initSearchResults();
   };
 
-  this.mainController.$inject = ['$scope', '$window', '$rootScope'];
+  this.mainController.$inject = ['$scope', '$window', '$rootScope', '$http'];
 
   bbApp.controller('mainController', mainController);
 

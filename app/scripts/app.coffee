@@ -5,4 +5,6 @@
   'ui.select2'
   'ui-rangeSlider'
   'ui.bootstrap'
+  'truncate'
+  'ngAnimate'
 ]);

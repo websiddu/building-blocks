@@ -1,0 +1,43 @@
+<div class="item searchAnimate" ng-repeat="result in searchResults.slice(0, 15) | filter: search">
+  <div class="item-media">
+    <img ng-src="http://tympanus.net/Development/Stapel/images/2/{{result.img}}.jpg" alt="" height="100px">
+  </div>
+  <div class="item-body">
+    <a href=""><h2 class="ellipsis truncate100p">{{result.title}}</h2></a>
+    <p>{{result.description | words: 50}}</p>
+  </div>
+  <div class="item-meta">
+    <p><span class="text-muted">Posted by</span> <img ng-src="images/av/{{result.img}}.jpg" alt="" height="20px"> <a href="">{{result.username}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="text-muted">Under the category </span>
+    <span class="label label-info">{{result.category}}</span>
+    </p>
+  </div>
+  <div class="item-meta-stats list-unstyled">
+    <ul class="pull-left">
+      <li>
+        <em class="icon icon-comments text-muted"></em>
+        {{result.comments}} Comments
+      </li>
+      <li>
+        <em class="icon  icon-group text-muted"></em>
+        {{result.volunteers}} Volunteers
+      </li>
+      <li>
+        <em class="icon icon-calendar-alt-fill text-muted"></em>
+        {{result.timeform}}  - {{result.timeto}}
+      </li>
+    </ul>
+    <ul class="pull-right ">
+    <li>
+      <em class="icon icon-location-arrow text-muted"></em>
+      {{result.place}}
+    </li>
+      <li>
+        <em class="icon  icon-circle c1 text-muted"></em>
+        {{result.status}}
+      </li>
+    </ul>
+
+  </div>
+
+</div>

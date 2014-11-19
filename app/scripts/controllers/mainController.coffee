@@ -1,6 +1,6 @@
 "use strict"
 
-@mainController = ($scope, $window, $rootScope) ->
+@mainController = ($scope, $window, $rootScope, $http) ->
 
 
   $scope.badges = [{
@@ -105,10 +105,17 @@
     $scope.openedOne = true
     return
 
+  $scope.searchResults = []
 
-  $scope.reload = ->
-    #$window.location.reload();
+  $scope.initSearchResults = ->
+    $http(
+      url: 'data/search-results.json'
+    ).success (data, status) ->
+        console.log data
+        $scope.searchResults = data
 
-@mainController.$inject = ['$scope', '$window', '$rootScope']
+  $scope.initSearchResults()
+
+@mainController.$inject = ['$scope', '$window', '$rootScope', '$http']
 
 bbApp.controller('mainController', mainController);
