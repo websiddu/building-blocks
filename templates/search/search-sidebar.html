@@ -1,0 +1,102 @@
+<div class="col-lg-3 sidebar" style="overflow:hidden;">
+  <div class="sidebar-decorator" style="height: 100px; background-color: #efefea; margin: 0 -20px; ">
+
+  </div>
+
+  <div class="sidebar-search">
+      <h4>Refine your search</h4>
+      <div class="row">
+        <div class="col-lg-11">
+          <div class="form-group">
+            <label for="password" class="control-label">Category</label>
+            <select name="js_category" class="form-control" id="js_category">
+              <option value="education">Educations</option>
+              <option value="gardening">Gardening</option>
+            </select>
+            <span class="help-block"></span>
+          </div>
+        </div>
+        <div class="col-lg-11">
+          <div class="form-group">
+            <label for="skillset" class="control-label">Skill set</label>
+            <div class="clearfix"></div>
+            <input type="hidden" ng-model="list_of_string" ui-select2="select2Options" class="">
+            </input>
+            <span class="help-block"> You can select more than one</span>
+          </div>
+        </div>
+        <div class="col-lg-11">
+          <div class="form-group">
+            <label for="status" class="control-label">Status</label>
+            <div class="clearfix"></div>
+            <select type="hidden" class="form-control">
+              <option value="ongoing">On going</option>
+              <option value="ongoing">Completed</option>
+              <option value="ongoing">Rejected</option>
+              <option value="ongoing">Just Started</option>
+            </select>
+            <span class="help-block"> Select a status</span>
+          </div>
+        </div>
+
+        <div class="col-lg-11">
+          <div class="form-group">
+            <label for="skillset" class="control-label">Badges awarded</label>
+            <div class="clearfix"></div>
+            <input type="hidden" ng-model="list_of_string_one"  ui-select2="select2OptionsOne" class="">
+            </input>
+            <span class="help-block"> Select the badges </span>
+          </div>
+        </div>
+
+        <div class="col-lg-11">
+          <div class="form-group">
+            <label for="skillset" class="control-label">Time range (hours)</label>
+            <div class="clearfix"></div>
+            <div range-slider min="0" max="100" model-min="range.min" model-max="range.max" show-values="true" attach-handle-values="true"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-11">
+          <div class="form-group">
+            <label for="skillset" class="control-label">In date range</label>
+            <br>
+            <label for="skillset" class="control-label">From </label>
+            <div class="clearfix"></div>
+            <p class="input-group">
+              <input type="text" class="form-control" ng-click="open($event)" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+              <label for="skillset" class="control-label">To </label>
+            <div class="clearfix"></div>
+            <p class="input-group">
+              <input type="text" class="form-control" ng-click="openOne($event)" datepicker-popup="{{format}}" ng-model="dt" is-open="openedOne" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-11">
+          <div class="form-group">
+            <div class="">
+              <input type="checkbox" name="" id=""> Exclude projects that I am part of
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-11">
+          <div class="form-group">
+            <div class="">
+              <a href="#"> Reset</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-info"> Search </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
