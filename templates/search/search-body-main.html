@@ -1,0 +1,37 @@
+<div class="col-lg-9">
+  <div class="page-content">
+    <div class="row-fluid">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
+        <div id="custom-search-input" class="search-input">
+          <div class="input-group col-md-12">
+            <input type="text" class="  search-query form-control" placeholder="Search" ng-model="search" />
+            <span class="input-group-btn">
+            <button class="btn btn-danger" type="button">
+            <span class=" glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+          </div>
+        </div>
+        <div>
+          <p class="help-text">
+          Showing <strong>40</strong> out of <strong>200</strong> resluts for the key work <strong> {{key}} </strong>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+    <div class="row-fluid search-results">
+      <div class="col-lg-12" style="margin-top: 30px;">
+        <h4 class="page-heading">Search Results</h4>
+        <hr style="margin-top: 5px;">
+        <div class="clearfix">
+
+        </div>
+        <div class="search-results">
+          <ng-include src="'templates/search/list-item.html'"></ng-include>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
