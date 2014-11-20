@@ -131,6 +131,12 @@
     $scope.openedOne = true
     return
 
+  $scope.openTwo = ($event) ->
+    $event.preventDefault()
+    $event.stopPropagation()
+    $scope.openedTwo = true
+    return
+
   $scope.searchResults = []
 
   $scope.initSearchResults = ->

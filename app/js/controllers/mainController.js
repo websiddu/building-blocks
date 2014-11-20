@@ -115,6 +115,11 @@
       $event.stopPropagation();
       $scope.openedOne = true;
     };
+    $scope.openTwo = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+      $scope.openedTwo = true;
+    };
     $scope.searchResults = [];
     $scope.initSearchResults = function() {
       return $http({

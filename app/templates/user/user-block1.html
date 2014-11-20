@@ -1,4 +1,4 @@
-<div class="col-lg-4 user-page-info-block">
+<div class="col-lg-6 user-page-info-block">
   <h4 class=""> Log your hours</h4>
   <span style='margin-bottom: 5px; display: block;'>Progress this week (40/100 hours)</span>
   <div class="progress" style="width: 90%;">
@@ -7,7 +7,7 @@
     </div>
   </div>
   <p class="text-muted"> Your volunteered <strong class="c3">20 </strong>hours this week </p>
-  <div style="display:inline-block; min-height:290px;">
+  <div style="width: 60%; min-height:290px;">
     <label for=""> Select the project </label>
     <select name="" id="" class="form-control">
       <option value=""> Gardenting at XYz</option>
@@ -15,10 +15,12 @@
       <option value=""> Lorem ipsum dolor.</option>
     </select>
     <br>
+    <label for=""> Select the date </label>
+    <input type="text" class="form-control" ng-model='dt' datepicker-popup="dd.MM.yyyy" is-open="openedTwo" ng-click="openTwo($event)" ng-required="true" close-text="Close" />
 
-    <datepicker ng-model="dt" show-weeks="true" class="well well-sm"></datepicker>
+
     <label for="">Number of hours</label>
-    <input type="number" class="form-field">
+    <input type="number" class="form-control">
     <br>
     <br>
     <button class="btn btn-info pull-right">Submit</button>
