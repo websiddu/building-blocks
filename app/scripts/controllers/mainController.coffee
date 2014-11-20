@@ -119,15 +119,26 @@
     $http(
       url: 'data/search-results.json'
     ).success (data, status) ->
-        console.log data
         $scope.searchResults = data
 
   $scope.initSearchResults()
 
 
 
+
+  $scope.myProjects = []
+
+  $scope.initmyProjects = ->
+    $http(
+      url: 'data/project-list.json'
+    ).success (data, status) ->
+        $scope.myProjects = data
+
+  $scope.initmyProjects()
+
+
   $scope.openStarupModal = ->
-    $location.path 'user'
+    $location.path 'startup'
     # modalInstance = $modal.open
     #   templateUrl: "templates/user/startup.html"
     #   controller: "startupController"

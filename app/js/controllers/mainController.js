@@ -103,13 +103,21 @@
       return $http({
         url: 'data/search-results.json'
       }).success(function(data, status) {
-        console.log(data);
         return $scope.searchResults = data;
       });
     };
     $scope.initSearchResults();
+    $scope.myProjects = [];
+    $scope.initmyProjects = function() {
+      return $http({
+        url: 'data/project-list.json'
+      }).success(function(data, status) {
+        return $scope.myProjects = data;
+      });
+    };
+    $scope.initmyProjects();
     return $scope.openStarupModal = function() {
-      return $location.path('user');
+      return $location.path('startup');
     };
   };
 

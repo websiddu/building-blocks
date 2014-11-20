@@ -6,6 +6,10 @@
     templateUrl: "templates/landing/index.html"
     controller: "mainController"
   )
+  .when("/startup",
+    templateUrl: "templates/user/startup.html"
+    controller: "mainController"
+  )
   .when("/user",
     templateUrl: "templates/user/index.html"
     controller: "mainController"
