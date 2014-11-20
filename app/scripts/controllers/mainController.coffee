@@ -161,6 +161,12 @@
   $scope.initmyProjects()
 
 
+  $scope.showAlert = false
+
+  $scope.toggleAlert = ->
+    $scope.showAlert = !$scope.showAlert
+
+
   $scope.openStarupModal = ->
     $location.path 'startup'
     # modalInstance = $modal.open

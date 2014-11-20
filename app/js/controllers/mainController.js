@@ -138,6 +138,10 @@
       });
     };
     $scope.initmyProjects();
+    $scope.showAlert = false;
+    $scope.toggleAlert = function() {
+      return $scope.showAlert = !$scope.showAlert;
+    };
     return $scope.openStarupModal = function() {
       return $location.path('startup');
     };
