@@ -12650,6 +12650,16 @@ body.ngrs-touching {
     padding: 12px 20px;
   }
 }
+.social-list-share li a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
 .user-side {
   padding: 20px 10px;
 }
