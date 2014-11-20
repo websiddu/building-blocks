@@ -10,6 +10,9 @@
     }).when("/user", {
       templateUrl: "templates/user/index.html",
       controller: "mainController"
+    }).when("/project", {
+      templateUrl: "templates/project/index.html",
+      controller: "mainController"
     }).when("/search", {
       templateUrl: "templates/search/index.html",
       controller: "mainController"

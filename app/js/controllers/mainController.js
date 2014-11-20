@@ -1,6 +1,9 @@
 (function() {
   "use strict";
   this.mainController = function($scope, $window, $rootScope, $http, $modal, $location) {
+    $scope.loadProject = function() {
+      return $location.path('project');
+    };
     $scope.badges = [
       {
         name: "Arya Stark",

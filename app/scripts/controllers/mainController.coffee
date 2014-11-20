@@ -2,6 +2,8 @@
 
 @mainController = ($scope, $window, $rootScope, $http, $modal, $location) ->
 
+  $scope.loadProject = ->
+    $location.path 'project'
 
   $scope.badges = [{
     name: "Arya Stark"
