@@ -77,6 +77,17 @@
       'placeholder': 'Type in your interests',
       'tags': ['Gardening ', 'Awesome', 'Education', 'Hiking']
     };
+    $scope.select2OptionsFour = {
+      'multiple': true,
+      'width': '100%',
+      'simple_tags': true,
+      'placeholder': 'Type in your interests',
+      'tags': ['Seattle ', 'Readmont', 'Kirkland', 'NewYork']
+    };
+    $scope.fresh = true;
+    $scope.toggleProject = function() {
+      return $scope.fresh = !$scope.fresh;
+    };
     $scope.range = {};
     $scope.range.min = 1;
     $scope.range.max = 100;

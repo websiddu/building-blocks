@@ -53,7 +53,16 @@
       </div>
       <div class="col-lg-2 text-center">
           <br>
-        <button class="btn btn-success btn-lg">Join this project</button>
+        <button class="btn btn-success btn-lg" ng-click="toggleProject()" ng-if="fresh">Join this project</button>
+        <div class="" ng-click="toggleProject()" ng-if="!fresh">
+          <div class="label label-info" style="font-size: 17px;"> Joined </div>
+          <br>
+          <br>
+          <small>
+            <span class="text-center text-muted"> You joined today</span>
+          </small>
+
+        </div>
 
       </div>
     </div>
