@@ -9,20 +9,22 @@
   <p class="text-muted"> Your volunteered <strong class="c3">20 </strong>hours this week </p>
   <div style="width: 60%; min-height:290px;">
     <label for=""> Select the project </label>
-    <select name="" id="" class="form-control">
+    <select name="" id="" class="form-control" required>
       <option value=""> Gardenting at XYz</option>
       <option value=""> Lorem ipsum dolor.</option>
       <option value=""> Lorem ipsum dolor.</option>
     </select>
     <br>
     <label for=""> Select the date </label>
-    <input type="text" class="form-control" ng-model='dt' datepicker-popup="dd.MM.yyyy" is-open="openedTwo" ng-click="openTwo($event)" ng-required="true" close-text="Close" />
+    <input type="text" class="form-control" ng-model='dt' datepicker-popup="dd.MM.yyyy" is-open="openedTwo" ng-click="openTwo($event)" ng-required="true" close-text="Close" required />
 
 
     <label for="">Number of hours</label>
     <input type="number" class="form-control">
     <br>
+    <button class="btn btn-info pull-right" ng-click="toggleAlert()">Submit</button>
+    <div class="clearfix"></div>
     <br>
-    <button class="btn btn-info pull-right">Submit</button>
+      <alert type="success" close="toggleAlert($index)" ng-if="showAlert"> Successfully update!!</alert>
   </div>
 </div>
