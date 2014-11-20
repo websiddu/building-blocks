@@ -1,6 +1,6 @@
 "use strict"
 
-@mainController = ($scope, $window, $rootScope, $http) ->
+@mainController = ($scope, $window, $rootScope, $http, $modal, $location) ->
 
 
   $scope.badges = [{
@@ -70,6 +70,14 @@
     'placeholder': 'Type the skill'
     'tags': ['Amazing Worker', 'Cool dude', 'Garden Friend', 'Super Teacher']
 
+  $scope.select2OptionsThree =
+    'multiple': true
+    'width': '100%'
+    'simple_tags': true,
+    'placeholder': 'Type in your interests'
+    'tags': ['Gardening ', 'Awesome', 'Education', 'Hiking']
+
+
   $scope.range = {}
   $scope.range.min = 1
   $scope.range.max = 100
@@ -116,6 +124,16 @@
 
   $scope.initSearchResults()
 
-@mainController.$inject = ['$scope', '$window', '$rootScope', '$http']
+
+
+  $scope.openStarupModal = ->
+    $location.path 'user'
+    # modalInstance = $modal.open
+    #   templateUrl: "templates/user/startup.html"
+    #   controller: "startupController"
+
+
+
+@mainController.$inject = ['$scope', '$window', '$rootScope', '$http', '$modal', '$location']
 
 bbApp.controller('mainController', mainController);

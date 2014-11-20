@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  this.mainController = function($scope, $window, $rootScope, $http) {
+  this.mainController = function($scope, $window, $rootScope, $http, $modal, $location) {
     $scope.badges = [
       {
         name: "Arya Stark",
@@ -64,6 +64,13 @@
       'placeholder': 'Type the skill',
       'tags': ['Amazing Worker', 'Cool dude', 'Garden Friend', 'Super Teacher']
     };
+    $scope.select2OptionsThree = {
+      'multiple': true,
+      'width': '100%',
+      'simple_tags': true,
+      'placeholder': 'Type in your interests',
+      'tags': ['Gardening ', 'Awesome', 'Education', 'Hiking']
+    };
     $scope.range = {};
     $scope.range.min = 1;
     $scope.range.max = 100;
@@ -100,10 +107,13 @@
         return $scope.searchResults = data;
       });
     };
-    return $scope.initSearchResults();
+    $scope.initSearchResults();
+    return $scope.openStarupModal = function() {
+      return $location.path('user');
+    };
   };
 
-  this.mainController.$inject = ['$scope', '$window', '$rootScope', '$http'];
+  this.mainController.$inject = ['$scope', '$window', '$rootScope', '$http', '$modal', '$location'];
 
   bbApp.controller('mainController', mainController);
 
