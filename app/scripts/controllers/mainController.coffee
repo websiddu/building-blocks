@@ -5,6 +5,9 @@
   $scope.loadProject = ->
     $location.path 'project'
 
+  $scope.submitSearch = ->
+    $location.path 'search'
+
   $scope.badges = [{
     name: "Arya Stark"
     school: "Seattle public school"

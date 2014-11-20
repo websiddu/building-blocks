@@ -4,6 +4,9 @@
     $scope.loadProject = function() {
       return $location.path('project');
     };
+    $scope.submitSearch = function() {
+      return $location.path('search');
+    };
     $scope.badges = [
       {
         name: "Arya Stark",
