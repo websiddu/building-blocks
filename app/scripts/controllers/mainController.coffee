@@ -150,7 +150,7 @@
     $http(
       url: 'data/project-list.json'
     ).success (data, status) ->
-        $scope.myProjects = data
+      $scope.myProjects = data
 
   $scope.initmyProjects()
 
