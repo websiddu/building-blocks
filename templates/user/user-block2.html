@@ -5,10 +5,10 @@
   <div style="height: 600px; padding: 0 10px; overflow-y: auto;">
     <ul class="project-list-mini">
       <li ng-repeat='prj in myProjects'>
-        <header>
+        <header ng-click="loadProject()">
           <div class="bg" style='background: url(http://tympanus.net/Development/Stapel/images/2/{{prj.img}}.jpg);'></div>
           <div class="fg">
-            <h3 class="truncate100p"> {{prj.name}}</h3>
+            <h3 class="truncate100p" ng-click="loadProject()"> {{prj.name}}</h3>
           </div>
         </header>
         <div class="progress" style="margin-top: 10px; height: 16px; margin-bottom: 10px;">
