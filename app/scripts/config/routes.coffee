@@ -10,6 +10,10 @@
     templateUrl: "templates/user/startup.html"
     controller: "mainController"
   )
+  .when("/new",
+    templateUrl: "templates/new/index.html"
+    controller: "mainController"
+  )
   .when("/user",
     templateUrl: "templates/user/index.html"
     controller: "mainController"

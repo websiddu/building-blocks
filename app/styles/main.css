@@ -12102,6 +12102,10 @@ body.ngrs-touching {
 .searchAnimate.ng-enter {
   opacity: 0;
 }
+.container.page {
+  margin-top: 70px;
+  box-shadow: 0 0 15px rgba(140, 140, 140, 0.44);
+}
 .navbar-brand img {
   margin-top: 15px;
 }
