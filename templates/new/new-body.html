@@ -1,0 +1,88 @@
+<style>
+.p-create .round-tabs {
+}
+
+.p-create-tab-content {
+  margin: 20px 0;
+}
+</style>
+<div class="container page">
+  <div class="row p-create">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <h3>Create a new project</h3>
+      <tabset>
+      <tab active="active1" disabled="tab.disabled">
+      <tab-heading>
+      <a href="#home" data-toggle="tab" title="welcome">
+        <span class="round-tabs one">
+        1
+        </span>
+        Basic Details
+      </a>
+      </tab-heading>
+      <div class="p-create-tab-content">
+      <form class="form">
+        <fieldset>
+          <!-- Form Name -->
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="control-label" for="Project Name ">Project Name </label>
+            <div class="">
+              <input id="Project Name " name="Project Name " type="text" placeholder="Project Name" class="form-control input-md" required="">
+              <span class="help-block">Give a name to your idea</span>
+            </div>
+          </div>
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class=" control-label" for="textarea">Description</label>
+            <div class="">
+              <textarea class="form-control" id="textarea" name="textarea" placeholder="Explain what you are thinking about this idea"></textarea>
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class=" control-label" for="textinput">Category</label>
+            <div class="">
+              <input id="textinput" name="textinput" type="text" placeholder="Select the category" class="form-control input-md">
+              <span class="help-block">In which category dose your idea falls in </span>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <div class="pull-right">
+        <a href="" class="btn btn-success"> Estimations & Goals &rarr;</a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </div>
+      </tab>
+      <tab active="active2" disabled="tab.disabled">
+      <tab-heading>
+      <a href="#home" data-toggle="tab" title="welcome">
+        <span class="round-tabs three">
+        2
+        </span>
+        Estimations & Goals
+      </a>
+      </tab-heading>
+      <ng-include src="'templates/new/step2.html'"></ng-include>
+      </tab>
+      <tab active="active3" disabled="tab.disabled">
+      <tab-heading>
+      <a href="#home" data-toggle="tab" title="welcome">
+        <span class="round-tabs two">
+        3
+        </span>
+        Preview & Submit
+      </a>
+      </tab-heading>
+      </tab>
+      </tabset>
+    </div>
+  </div>
+</div>

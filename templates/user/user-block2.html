@@ -2,15 +2,16 @@
 </style>
 <div class="col-lg-6 user-page-info-block">
   <h4 class=""> Your Projects </h4>
-  <div style="height: 600px; padding: 0 10px; overflow-y: auto;">
+  <div style="height: 500px; padding: 0 10px; overflow-y: auto;">
     <ul class="project-list-mini">
-      <li ng-repeat='prj in myProjects'>
+      <li ng-repeat='prj in myProjects.slice(0, 5)'>
         <header ng-click="loadProject()">
           <div class="bg" style='background: url(http://tympanus.net/Development/Stapel/images/2/{{prj.img}}.jpg);'></div>
           <div class="fg">
             <h3 class="truncate100p" ng-click="loadProject()"> {{prj.name}}</h3>
           </div>
         </header>
+        <h5>Project progress</h5>
         <div class="progress" style="margin-top: 10px; height: 16px; margin-bottom: 10px;">
           <div class="progress-bar progress-bar-info progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{prj.percent}}%">
             <span class="sr-only">{{prj.percent}}% Complete (success)</span>
