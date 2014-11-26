@@ -11,6 +11,15 @@
       <a class="navbar-brand" href="#"><img src="images/logo.svg" height="40px" alt=""></a>
     </div>
 
+
+    <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search" ng-submit="submitSearch()">
+            <input type="text" class="form-control" placeholder="Search" name="q" style="width: 100%;">
+                <i class="glyphicon glyphicon-search search-icon"></i>
+                <input type="submit" id="submit" value="Submit" class="hide" />
+        </form>
+    </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <!--       <ul class="nav navbar-nav">
