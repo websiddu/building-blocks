@@ -7,6 +7,41 @@
     $scope.submitSearch = function() {
       return $location.path('search');
     };
+    $scope.comments = [
+      {
+        comment: "We were sitting around talking about our page on public art, and wondering how we could make it more, well, useful. As in Useful Community Development.",
+        name: "Arya Stark",
+        time: '5min ago',
+        img: 2
+      }, {
+        comment: "OK. Now we come to the long, drawn-out, data-driven form of deciding on a shared future. Do you have a great city, neighborhood, block, or national economic plan to share with us? Preferably one with an implementation history in the making.",
+        name: "Arya Stark",
+        time: '20min ago',
+        img: 1
+      }, {
+        comment: "OK. Now we come to the long, drawn-out, data-driven form of deciding on a shared future. Do you have a great city, neighborhood, block, or national economic plan to share with us? Preferably one with an implementation history in the making.",
+        name: "Joffrey Lannister",
+        time: '20min ago',
+        img: 3
+      }, {
+        comment: "Tell us about a success or failure if it will help others. Here's where to post or see the community improvement project description, experience, or opinion.",
+        name: "Joffrey Lannister",
+        time: '25min ago',
+        img: 1
+      }
+    ];
+    $scope.newcomment = '';
+    $scope.addNewComment = function() {
+      var newComment;
+      newComment = {
+        comment: $('#newcomment').val(),
+        name: "Arya Startk",
+        time: "Just now",
+        img: 1
+      };
+      $('#newcomment').val('');
+      return $scope.comments.unshift(newComment);
+    };
     $scope.badges = [
       {
         name: "Arya Stark",

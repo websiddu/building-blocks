@@ -1,0 +1,55 @@
+    <div class="row">
+        <div class="">
+<!--             <div class="panel-heading">
+
+                <h3 class="panel-title pull-left">
+                <span class="glyphicon glyphicon-comment"></span>
+                    Recent Discussions &nbsp;&nbsp;&nbsp;</h3>
+                <span class="label label-info">
+                    78</span>
+            </div> -->
+            <div class="panel-body">
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img ng-src="images/usr/1.png" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                            <form  ng-submit="addNewComment()">
+                                <div class="comment-text">
+                                    <textarea name="textarea" id="newcomment" cols="30" rows="4" class="form-control" ng-model="newcomment" required></textarea>
+                                </div>
+                                    <br>
+                                    <button class="btn btn-success" type="submit">Comment</button>
+                            </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" ng-repeat="comment in comments">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img ng-src="images/usr/{{comment.img}}.png" class="img-circle img-responsive" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div class="mic-info">
+                                        <a href="#">{{comment.name}}</a> <span class="text-muted">on {{comment.time}}</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    {{comment.comment}}
+                                </div>
+                                    <br>
+                                <div class="action">
+                                    <a href="">Reply</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="">Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+            </div>
+        </div>
+    </div>
