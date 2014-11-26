@@ -10,59 +10,51 @@
 
           <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
           <tabset>
-          <tab active="active1" disabled="tab.disabled">
+
+
+
+          <tab active="active4" disabled="tab.disabled">
           <tab-heading>
           <a href="#home" data-toggle="tab" title="welcome">
-            <span class="round-tabs one">
-            <i class="glyphicon glyphicon-camera"></i>
+            <span class="round-tabs four">
+            <i class="icon icon-badge"></i>
             </span>
           </a>
           </tab-heading>
-          <h3 class="text-center">Add your photo <span style="color:#f48260;">♥</span></h3>
-          <div class="camera">
-            Drag and drop from your computer
-            <br>
-            (or)
-            <br>
-            <br>
-            <button class="btn btn-info"> Click to upload</button>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-lg-8">
-            </div>
-            <div class="col-lg-4">
-              <button class="btn btn-info" ng-click="active2 = true">Next &rarr;</button>
-            </div>
-          </div>
-          </tab>
-          <tab active="active2" disabled="tab.disabled">
-          <tab-heading>
-          <a href="#home" data-toggle="tab" title="welcome">
-            <span class="round-tabs three">
-            <i class="glyphicon glyphicon-heart-empty"></i>
-            </span>
-          </a>
-          </tab-heading>
-          <h3 class="text-center">Tell you interested <span style="color:#f48260;"> <em class="icon icon-calandar"></em></span></h3>
+          <h3 class="text-center">Little more about you<span style="color:#f48260;"> <em class="icon icon-calandar"></em></span></h3>
           <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-              <input type="hidden" ng-model="list_of_string_one"  ui-select2="select2OptionsThree" class="">
+              <form id="loginForm" method="POST" action="/login/" novalidate="novalidate" class="ng-pristine ng-valid">
+                <div class="form-group">
+                  <label for="username" class="control-label">School</label>
+                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Seattle public school">
+                  <span class="help-block"></span>
+                </div>
+                <div class="form-group">
+                  <label for="locaiton" class="control-label">Your location </label>
+                  <input type="locaiton" class="form-control" id="locaiton" name="locaiton" value="" required="" title="Please enter your locaiton" placeholder="Your locaiton eg. Seattle">
+                  <span class="help-block"></span>
+                </div>
+                <div class="form-group">
+                  <label for="username" class="control-label">About you</label>
+                  <textarea class="form-control"></textarea>
+                  <span class="help-block"></span>
+                </div>
+              </form>
             </div>
             <div class="col-lg-2"></div>
           </div>
-          <div class="clearfix"></div>
-          <br><br><br><br>
-          <div class="row">
+<div class="row">
             <div class="col-lg-8">
             </div>
             <div class="col-lg-4">
-              <button class="btn btn-info" ng-click="active3 = true">Next &rarr;</button>
+              <button class="btn btn-info" ng-click="active5 = true">Next &rarr;</button>
             </div>
           </div>
 
           </tab>
+
           <tab active="active3" disabled="tab.disabled">
           <tab-heading>
           <a href="#home" data-toggle="tab" title="welcome">
@@ -150,47 +142,65 @@
           </div>
 
           </tab>
-          <tab active="active4" disabled="tab.disabled">
+
+
+          <tab active="active2" disabled="tab.disabled">
           <tab-heading>
           <a href="#home" data-toggle="tab" title="welcome">
-            <span class="round-tabs four">
-            <i class="icon icon-badge"></i>
+            <span class="round-tabs three">
+            <i class="glyphicon glyphicon-heart-empty"></i>
             </span>
           </a>
           </tab-heading>
-          <h3 class="text-center">Little more about you<span style="color:#f48260;"> <em class="icon icon-calandar"></em></span></h3>
+          <h3 class="text-center">Tell you interested <span style="color:#f48260;"> <em class="icon icon-calandar"></em></span></h3>
           <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-              <form id="loginForm" method="POST" action="/login/" novalidate="novalidate" class="ng-pristine ng-valid">
-                <div class="form-group">
-                  <label for="username" class="control-label">School</label>
-                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Seattle public school">
-                  <span class="help-block"></span>
-                </div>
-                <div class="form-group">
-                  <label for="locaiton" class="control-label">Your location </label>
-                  <input type="locaiton" class="form-control" id="locaiton" name="locaiton" value="" required="" title="Please enter your locaiton" placeholder="Your locaiton eg. Seattle">
-                  <span class="help-block"></span>
-                </div>
-                <div class="form-group">
-                  <label for="username" class="control-label">About you</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="help-block"></span>
-                </div>
-              </form>
+              <input type="hidden" ng-model="list_of_string_one"  ui-select2="select2OptionsThree" class="">
             </div>
             <div class="col-lg-2"></div>
           </div>
-<div class="row">
+          <div class="clearfix"></div>
+          <br><br><br><br>
+          <div class="row">
             <div class="col-lg-8">
             </div>
             <div class="col-lg-4">
-              <button class="btn btn-info" ng-click="active5 = true">Next &rarr;</button>
+              <button class="btn btn-info" ng-click="active3 = true">Next &rarr;</button>
             </div>
           </div>
 
           </tab>
+
+
+
+          <tab active="active1" disabled="tab.disabled">
+          <tab-heading>
+          <a href="#home" data-toggle="tab" title="welcome">
+            <span class="round-tabs one">
+            <i class="glyphicon glyphicon-camera"></i>
+            </span>
+          </a>
+          </tab-heading>
+          <h3 class="text-center">Add your photo <span style="color:#f48260;">♥</span></h3>
+          <div class="camera">
+            Drag and drop from your computer
+            <br>
+            (or)
+            <br>
+            <br>
+            <button class="btn btn-info"> Click to upload</button>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-lg-8">
+            </div>
+            <div class="col-lg-4">
+              <button class="btn btn-info" ng-click="active2 = true">Next &rarr;</button>
+            </div>
+          </div>
+          </tab>
+
           <tab active="active5" disabled="tab.disabled">
           <tab-heading>
           <a href="#home" data-toggle="tab" title="welcome">
